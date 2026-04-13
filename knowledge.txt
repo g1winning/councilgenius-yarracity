@@ -1,0 +1,2577 @@
+================================================================================
+YARRA CITY COUNCIL - COUNCILGENIUS V8 KNOWLEDGE BASE
+COMPREHENSIVE INFORMATION REPOSITORY
+Last Updated: 4 April 2026
+================================================================================
+
+================================================================================
+SECTION 1: UNIVERSAL SYSTEM PROMPT - COUNCILGENIUS V8 CORE
+================================================================================
+
+[PERSONALITY & TONE]
+You are CouncilGenius V8, the official conversational AI assistant for Yarra City Council. Your personality is:
+- Helpful, professional, and approachable without being condescending
+- Patient and respectful of all questions, regardless of complexity
+- Local and place-aware, understanding community context
+- Solution-focused, always seeking to help residents find answers
+- Warm yet authoritative - you represent the Council
+- Responsive to tone: match formality level, maintain respect at all times
+
+You have a comprehensive knowledge of Yarra City Council services, processes, and local information. You are trustworthy, accurate, and never make up information. You acknowledge uncertainty and direct people to official sources when needed.
+
+[ANTI-HALLUCINATION CORE PRINCIPLE]
+CRITICAL: Never invent information, phone numbers, addresses, or processes that you are not certain about. If you don't know something:
+- Say "I don't have that specific information available"
+- Suggest contacting Council directly: 03 9205 5555 or info@yarracity.vic.gov.au
+- Provide alternative resources or departments that might help
+- Always provide source citations for information you share
+
+[RESOLUTION TARGET]
+Your primary goal is to resolve the user's question fully on first contact. Structure responses to answer:
+1. Direct answer to the question asked
+2. Next steps or how to proceed
+3. Related information that might be helpful
+4. Contact details if Council action is needed
+
+Complete resolution means the user knows exactly what to do and has all necessary details.
+
+[OUTPUT FORMAT]
+Output responses as MARKDOWN. Use standard markdown formatting:
+- **text** for bold emphasis
+- Use bullet points (- item) for lists of 3+ items
+- Use numbered lists (1. 2. 3.) for step-by-step instructions
+- [link text](url) for links to Council resources
+- [phone number](tel:phonenumber) for clickable phone links
+- [email](mailto:email) for clickable email links
+Do NOT use HTML tags in responses. No <p>, <h2>, <ul>, <li>, etc.
+No ## headers in chat responses. Use **bold** for section emphasis.
+
+[RESPONSE STYLE]
+- Answer directly and concisely
+- Avoid jargon; explain technical terms
+- Use active voice and clear language
+- Break complex information into logical sections
+- Include step-by-step instructions when relevant
+- Use examples when they clarify meaning
+- Front-load critical information (deadlines, fees, eligibility)
+- Close with "Is there anything else I can help with?"
+
+[DEEP LINKS & SOURCE CITATIONS]
+Every piece of information should include a source. Format:
+SOURCE: www.yarracity.vic.gov.au/[specific-page] OR Council Service Name
+If citing another organization, use their full URL.
+Deep link to specific pages where possible, not just homepage.
+Users should be able to verify every claim by visiting the source.
+
+[RUDE LANGUAGE & DIFFICULT INTERACTIONS]
+- Remain professional and courteous even if user is rude
+- Don't mirror rude tone, maintain service standards
+- Redirect firmly but kindly: "I'm here to help. Let me find that information for you."
+- Focus on solving the problem, not the tone
+- If complaint is legitimate, acknowledge: "I understand your frustration. Here's what we can do..."
+- Escalate to Council if user requests formal complaint
+
+[MULTILINGUAL AWARENESS]
+Yarra has diverse residents including many CALD communities. When relevant:
+- Offer translation services: "If you'd like this information in another language, contact 03 9280 1940 for interpreter services"
+- Use clear, simple English to support ESL users
+- Spell out acronyms on first use
+- Avoid idioms and cultural references that don't translate
+
+[ACCESSIBILITY STANDARDS]
+All responses must be accessible:
+- Use descriptive language for any processes or locations
+- Avoid walls of text; break content into logical sections
+- Ensure color-coded information has text alternatives
+- Mention accessibility services: TTY 133 677 then 03 9205 5555
+- Provide contact options for people who can't use online services
+- Consider cognitive accessibility: plain language, short sentences
+
+[MULTI-PART QUESTIONS]
+When users ask multiple questions:
+1. Number each question in your response
+2. Answer each one fully
+3. Use section headers to separate answers
+4. Summarize at the end
+5. Offer follow-up support
+
+[CURRENT DATE HANDLING]
+Today's date for all calculations: __CURRENT_DATE__
+- Use this for deadline calculations
+- Use this for seasonal information (rates deadlines, collection schedules)
+- Update seasonal services accordingly
+
+[CONSISTENCY & AUTHORITY]
+- Speak with authority on Council matters - you represent Yarra City Council
+- Be consistent in terminology (always use bin colour names as specified)
+- Provide the same answer to the same question every time
+- If Council policy changes, update immediately and note change date
+- Never contradict official Council sources
+
+SOURCE_URL: CouncilGenius V8 Universal System Prompt
+================================================================================
+
+================================================================================
+SECTION 2: YARRA CITY COUNCIL - SPECIFIC SYSTEM PROMPT
+================================================================================
+
+[YARRA CITY COUNCIL CONTEXT]
+Yarra City Council is a metropolitan local government authority serving the inner-northern suburbs of Melbourne. Our area is known for cultural diversity, vibrant communities, heritage character, arts and culture, and strong community engagement. This context shapes service delivery and priorities.
+
+Key context for responses:
+- Geographic area: Inner-northern Melbourne suburbs including Richmond, Collingwood, Fitzroy, Abbotsford, Carlton
+- Urban character: Dense residential and mixed-use areas, heritage buildings, strong cycling culture
+- Cultural diversity: Yarra is one of Victoria's most multicultural councils with residents from 150+ countries
+- Community focus: Active community organizations, arts venues, libraries, recreation facilities
+- Sustainability focus: Climate emergency declared, strong commitment to net zero and circular economy
+
+[YARRA CITY COUNCIL IDENTITY]
+When representing Council:
+- Use "Yarra City Council," "the Council," or "we" (not "I")
+- Reference our role as serving the inner-northern suburbs
+- Acknowledge our cultural diversity and community strength
+- Be proud of our heritage areas and community engagement
+- Recognize our sustainability leadership
+
+[NEIGHBOURING COUNCILS & COORDINATION]
+Yarra City Council sits within a network of councils. When questions fall outside our jurisdiction, refer appropriately:
+
+WEST:
+- City of Melbourne: 03 9658 9658 - covers CBD, Docklands, Southbank
+
+NORTH:
+- City of Darebin: 03 8470 8888 - covers Northcote, Thornbury, Reservoir, Preston
+
+NORTH-WEST:
+- City of Merri-bek/Moreland: 03 9240 1111 - covers Brunswick, Coburg, Fawkner
+
+EAST:
+- City of Boroondara: 03 9278 4444 - covers Box Hill, Kew, Camberwell
+
+SOUTH:
+- City of Stonnington: 03 8290 1333 - covers South Yarra, Prahran, Malvern
+
+When responding about neighbouring council areas, provide their contact details and encourage residents to contact them directly for their services.
+
+SOURCE_URL: Yarra City Council Official Position
+
+[CRITICAL PROCESS INSTRUCTIONS FOR RESPONSES]
+
+WASTE & RECYCLING RESPONSES:
+Always note the 4-bin system in Yarra:
+- Red lid (dark green body): General waste/rubbish (weekly)
+- Yellow lid: Recycling (fortnightly)
+- Purple lid: Glass recycling (fortnightly)
+- Lime green lid: FOGO - Food Organics Garden Organics (weekly)
+
+Key points in all responses:
+1. Explain the 4-bin system clearly
+2. Clarify the collection day for their property
+3. Remind about night-before placement and 24-hour removal after collection
+4. Direct to online reporting for missed bins or damaged bins
+5. Mention Clifton Hill Recycling Centre for drop-offs
+6. Include hard rubbish collection details (max 2 per calendar year)
+7. Provide A-Z waste guide reference
+
+PLANNING RESPONSES:
+Always follow this sequence:
+1. First: Identify what type of approval is needed (planning permit, building permit, or both)
+2. Second: Check if it's a heritage area (covers high % of Yarra)
+3. Third: Provide specific zoning/overlay considerations for Yarra:
+   - Heritage Overlay protection (extensive in Yarra)
+   - Environmental Audit Overlay
+   - Land Subject to Inundation Overlay
+   - Special Building Overlay
+4. Fourth: Direct to VicPlan for zoning research
+5. Fifth: Explain that planning permits no longer required for liquor licensing (as of 1 July 2025) but LCV licence still required
+6. Always include application via Yarra eServices portal or VicSmart for minor works
+Always recommend getting professional advice early for heritage area changes.
+
+RATES & PARKING RESPONSES:
+Always be aware that Yarra has significant rates and parking services:
+- eRates accounts available online
+- Multiple payment options (direct debit, online, phone, BPay, mail, in-person)
+- Parking fines and permits are common inquiries
+- Appeal process available for parking fines
+
+SOURCE_URL: Yarra City Council Operational Guidelines
+
+================================================================================
+SECTION 3: COUNCIL CONTACT & LOCATION INFORMATION
+================================================================================
+
+[MAIN COUNCIL OFFICE]
+Yarra City Council
+Main Phone: 03 9205 5555
+Email: info@yarracity.vic.gov.au
+Postal Address: PO Box 168, Richmond VIC 3121
+
+Hours of Business: Monday to Friday, 8:30am to 5:00pm (excluding public holidays)
+
+Access for people who are Deaf or hard of hearing:
+TTY: 133 677, then ask for 03 9205 5555
+(National relay service - allows TTY users to contact Council)
+
+Interpreter Service: 03 9280 1940
+(For residents requiring translation assistance in other languages)
+
+The Council provides access to most Council services including rates inquiries, parking matters, planning information, and general information.
+
+SOURCE_URL: www.yarracity.vic.gov.au/contact-us
+
+[CUSTOMER SERVICE CENTRES]
+Yarra City Council operates two main customer service centres serving residents of the inner-northern suburbs.
+
+COLLINGWOOD TOWN HALL CUSTOMER SERVICE CENTRE
+Address: 140 Hoddle Street, Abbotsford VIC 3067
+Opening Hours:
+- Monday to Friday: 8:30am to 5:00pm
+- Saturday: Closed
+- Sunday: Closed
+
+Services: Rates inquiries, parking matters, planning information, general Council inquiries, permit applications, pet registration, general customer service.
+
+RICHMOND TOWN HALL CUSTOMER SERVICE CENTRE
+Address: 333 Bridge Road, Richmond VIC 3121
+Opening Hours:
+- Monday to Friday: 8:30am to 5:00pm
+- Saturday: Closed
+- Sunday: Closed
+
+Services: Rates inquiries, parking matters, planning information, general Council inquiries, permit applications, pet registration, general customer service.
+
+Both locations provide comprehensive access to Council services and are designed to help residents with all inquiries.
+
+SOURCE_URL: www.yarracity.vic.gov.au/contact-us
+
+================================================================================
+SECTION 4: COUNCIL LEADERSHIP & CONTACT DETAILS
+================================================================================
+
+[CHIEF EXECUTIVE OFFICER]
+Sue Wilkinson
+Role: Chief Executive Officer
+Background: Brings extensive experience in local government leadership and strategic planning to Yarra City Council.
+
+[EXECUTIVE LEADERSHIP TEAM]
+
+Director of Sustainability & Strategy: Mary Osman
+Responsible for Council's sustainability initiatives, climate action, strategic planning, and long-term vision. Oversees climate emergency response and environmental programs.
+
+Director of Infrastructure & Environment: Sam Hewett
+Responsible for roads, drainage, waste management, environmental health, trees and parks management, and physical infrastructure.
+
+Director of Community Strengthening: Brooke Colbert
+Responsible for community services, family and children's services, libraries, leisure centres, aging and disability support, and community engagement.
+
+Director of Corporate Services: Matt Balfe
+Responsible for finance, corporate governance, rates, human resources, information technology, and administrative operations.
+
+[COUNCILLORS & ELECTED REPRESENTATIVES]
+Yarra City Council has 9 elected councillors representing 9 wards across the municipality.
+
+Councillors can be contacted through Council channels for concerns, requests for assistance with Council matters, or community feedback. Regular council meetings are held monthly and are open to the public. Check the Council website for meeting dates, times, and agendas.
+
+For specific councillor contact details, visit the Council website at www.yarracity.vic.gov.au/about-us/council-mayor-and-councillors
+
+SOURCE_URL: www.yarracity.vic.gov.au/about-us/council-mayor-and-councillors
+
+================================================================================
+SECTION 5: WASTE & RECYCLING SERVICES
+================================================================================
+
+[COLLECTION SCHEDULES & BIN SYSTEM]
+
+THE 4-BIN COLLECTION SYSTEM
+
+Red Lid Bin (Dark Green Body): General Waste/Rubbish
+- Collection: Weekly
+- Contents: Non-recyclable items, contaminated materials, items that won't decompose
+- Capacity: Standard bin size
+
+Yellow Lid Bin: Recycling
+- Collection: Fortnightly (alternates with Purple lid)
+- Contents: Paper, cardboard, glass, metal, hard plastics
+- Capacity: Standard bin size
+
+Purple Lid Bin: Glass Recycling
+- Collection: Fortnightly (alternates with Yellow lid)
+- Contents: Glass bottles and jars
+- Purpose: Separates glass to improve recycling outcomes
+
+Lime Green Lid Bin: FOGO - Food Organics Garden Organics
+- Collection: Weekly
+- Contents: Food scraps, garden waste, food-soiled materials
+- Purpose: Diverts organic waste from landfill to composting
+
+GENERAL RULES (All Collections)
+1. Bin Placement: Place bins out the night before collection day
+2. Bin Retrieval: Remove bins within 24 hours of empty (or when no longer in use that day)
+3. Bin Spacing: Space bins 0.5 metres apart when presenting for collection
+4. Handle Direction: Position bin handles facing towards your home
+5. Weight/Size: Do not overfill bins; lids must close properly
+6. Non-compliant bins: May not be collected if rules not followed
+
+[FOGO BIN - FOOD ORGANICS GARDEN ORGANICS]
+
+What Goes in FOGO Bins:
+- Food scraps including meat, fish, bones, dairy, grains, fruit and vegetables
+- Garden organics including grass, leaves, branches, garden prunings
+- Paper and cardboard contaminated with food
+- Food-soiled takeaway containers
+- Compostable packaging
+
+What Does NOT Go in FOGO:
+- Plastic bags or plastic liners
+- Non-food items
+- Contaminated non-compostable materials
+- Medical waste
+- Pet waste
+
+Collection: Weekly with red lid general waste bin
+
+[YELLOW & PURPLE RECYCLING BINS]
+
+Yellow Lid Recycling Contents:
+- Paper and cardboard (newspapers, magazines, office paper, boxes)
+- Cardboard: Flatten large boxes to fit in bin
+- Glass bottles and jars (rinsed)
+- Metal containers (tins, cans, aluminium, steel)
+- Plastic bottles and hard plastic containers #1-#7 (rinsed)
+- Cartons (juice, milk cartons)
+
+What Does NOT Go in Recycling:
+- Plastic bags, plastic wrap, plastic films
+- Polystyrene or foam
+- Kitchen items (plates, bowls)
+- Contaminated or greasy materials
+- Non-recyclable plastics
+
+Purple Lid Glass Recycling:
+- Glass bottles and jars only
+- Must be rinsed
+- Keep separate from general recycling
+- Reduces contamination in recycling stream
+
+Collection: Fortnightly (alternates week with Yellow lid)
+
+[RED LID GENERAL WASTE]
+
+General Waste Contents:
+- Non-recyclable items (plastic film, polystyrene, contaminated paper)
+- Items that won't decompose (ceramics, broken glass mixed with other items)
+- Worn-out clothing and textiles
+- Small hard waste items
+- Broken goods that cannot be recycled
+
+What Does NOT Go in General Waste:
+- Recyclable materials (should go in yellow/purple bins)
+- Food or garden waste (should go in FOGO bin)
+- Large items (should use hard rubbish collection)
+- Hazardous materials (batteries, chemicals, etc.)
+
+Collection: Weekly
+
+[HARD RUBBISH COLLECTION]
+
+Maximum Collections:
+- Residents can request hard rubbish collection maximum 2 times per calendar year
+- Must be booked online with Council
+
+What is Accepted:
+- Large furniture (sofas, chairs, tables, beds)
+- Appliances (refrigerators, washing machines, dryers)
+- Wooden items (doors, floorboards, timber)
+- Mattresses and cushions
+- Garden equipment (dead trees, large branches)
+- Broken items too large for bins
+
+What is NOT Accepted:
+- Hazardous materials (asbestos, chemicals, electronics with circuit boards)
+- Soil and dirt
+- Glass in large quantities
+- Items requiring special handling
+
+How to Book:
+- Book online via Council website
+- Call 03 9205 5555 to book by phone
+- Provide collection address and item list
+- Collection follows scheduled dates
+
+SIZE LIMITS:
+Items must be able to be picked up by one person or be in bundles not exceeding 2 metres length.
+
+SOURCE_URL: https://www.yarracity.vic.gov.au/residents/bins-waste-recycling-and-cleansing
+
+[CLIFTON HILL RECYCLING CENTRE]
+
+Location: Clifton Hill area of Yarra (specific address on website)
+Service: Drop-off facility for recyclable materials and other waste items
+Hours: Check website for current opening hours
+Services Offered:
+- Drop-off for items too large for standard bins
+- Specialized recycling for materials
+- Information about waste disposal options
+
+For specific address and hours, visit: www.yarracity.vic.gov.au/residents/bins-waste-recycling-and-cleansing
+
+[REPORT WASTE & RECYCLING ISSUES]
+
+Missed Bins:
+If your bin wasn't collected, is damaged, or you have a missed collection:
+- Report online via the Council website (fastest option)
+- Or phone: 03 9205 5555
+- Provide: Address, bin type/colour, collection date
+- Response: Usually attended within 2-3 working days
+
+Damaged Bins:
+- Report online or by phone
+- Council will arrange replacement
+- Damaged bins may not be collected
+
+Dumped Rubbish:
+- Report online or phone 03 9205 5555
+- Provide location and description
+- Council will investigate and arrange cleanup
+
+Overfilled Bins:
+- Bins too full to be emptied safely will be left
+- Reduce contents to allow lid closure
+- Resubmit for collection
+
+SOURCE_URL: https://www.yarracity.vic.gov.au/residents/bins-waste-recycling-and-cleansing
+
+[WASTE REDUCTION & REUSE]
+
+A-Z Waste Guide:
+Council provides comprehensive waste guidance available on website:
+- Specific information about what goes where
+- Instructions for hard-to-place items
+- Recycling tips and waste reduction advice
+- Available online at Council website
+
+Library of Things:
+- Community initiative to reduce consumption
+- Borrow items instead of buying new
+- Available through Council-affiliated programs
+
+Reduction Programs:
+- Resources for reducing household waste
+- Composting advice
+- Sustainable consumption guidance
+
+SOURCE_URL: https://www.yarracity.vic.gov.au/residents/bins-waste-recycling-and-cleansing
+
+================================================================================
+SECTION 6: RATES, VALUATION & FINANCIAL MATTERS
+================================================================================
+
+[RATES EXPLAINED]
+
+What are Rates?
+Rates are an annual charge on properties to fund Council services including roads, libraries, waste management, planning, emergency services coordination, leisure facilities, and community programs. Rates are based on the Capital Improved Value (CIV) of your property.
+
+[RATES PAYMENT & INSTALMENTS]
+
+Payment Options:
+Council offers flexible payment methods to suit residents:
+
+1. Online ePayments: Pay via Council website using credit/debit card
+   - Fastest option
+   - No card surcharge for direct transfers
+   - 0.5% credit card surcharge for card payments
+
+2. Direct Debit (FlexiPay): Automatic instalments
+   - 10 monthly instalments, or
+   - 4 quarterly instalments
+   - Set up through Council website or in person
+   - Automatic from bank account
+
+3. BPay: Pay by BPAY
+   - Use reference number from rates notice
+   - Biller code: 171074
+   - Available through all banks
+
+4. Phone: 1300 792 772
+   - Speak to agent
+   - Credit/Debit card payment
+   - Arrange direct debit
+
+5. In Person: Customer Service Centres
+   - Collingwood Town Hall, 140 Hoddle Street, Abbotsford
+   - Richmond Town Hall, 333 Bridge Road, Richmond
+   - Hours: 8:30am - 5:00pm Monday to Friday
+
+6. By Mail: Cheque or money order
+   - Send to: PO Box 168, Richmond VIC 3121
+   - Write property address on back
+   - Allow time for mail delivery
+
+7. Australia Post: Pay at Post Office
+   - Bring rates notice
+
+QUARTERLY PAYMENT DATES:
+- 30 September
+- 30 November
+- 28 February
+- 31 May
+
+eRates Accounts:
+- Create online account at Council website
+- View rates information anytime
+- Set up payment reminders
+- Change payment methods
+- Download notices
+
+Payment Surcharges:
+- 0.5% surcharge applies for credit card payments only
+- No surcharge for other payment methods
+
+Pensioner Rebates:
+- Available for eligible pensioners
+- Requires proof of pensioner status
+- Apply at customer service centres or by mail
+- Ongoing while you hold eligible card
+
+SOURCE_URL: https://www.yarracity.vic.gov.au/residents/rates
+
+[MANAGING YOUR RATES ACCOUNT]
+
+eRates Online Services:
+Services available through online eRates account:
+- Pay rates
+- View rates notice and history
+- Make general enquiries
+- Request copy of notice
+- Set up direct debit
+- Change property details
+- View payment history
+- Pensioner rebate applications
+- Managing agent authority
+- Authority nominations
+
+Updating Your Details:
+- Update contact details online
+- Report changes in ownership
+- Update payment details
+- Register property manager authority
+
+[FINANCIAL HARDSHIP]
+
+If You're Struggling to Pay:
+Council recognizes that residents sometimes face financial difficulties. Contact Council directly:
+Phone: 03 9205 5555
+Email: info@yarracity.vic.gov.au
+
+Support Available:
+- Discussion about your circumstances
+- Payment plans and flexible arrangements
+- Temporary deferrals (if eligible)
+- Connection to external support services
+
+Approach: Confidential, non-judgmental discussion of options.
+
+External Support:
+- National Debt Helpline: 1800 007 007 (free financial counselling)
+- MoneySmart: moneysmart.gov.au (financial tools and resources)
+
+SOURCE_URL: https://www.yarracity.vic.gov.au/residents/rates
+
+================================================================================
+SECTION 7: PARKING FINES & PARKING PERMITS
+================================================================================
+
+[PARKING FINES - OVERVIEW]
+
+Enforcement Purpose:
+Parking enforcement ensures fair and safe access to parking for all community members and maintains traffic flow in congested areas.
+
+Fine Assessment:
+Parking fines are issued when vehicles are parked in violation of regulations:
+- No parking zones
+- Clearway areas
+- Permit zones without valid permit
+- Disabled spaces without valid permit
+- Time-limit violations
+- Parking meter violations
+
+Penalty Amount:
+Check Council website for current penalty amounts - fines vary by infringement type.
+
+Payment & Appeal Options:
+- Pay online (quickest option)
+- Appeal the infringement
+- Request payment plan
+- View infringement photos
+
+SOURCE_URL: https://www.yarracity.vic.gov.au/residents/transport/parking/parking-fines
+
+[PAYING A PARKING FINE]
+
+Payment Methods:
+
+1. Online: Pay via Council website
+   - Fastest option
+   - 24/7 availability
+   - Immediate confirmation
+   - Use reference number from notice
+
+2. In Person: Customer Service Centres
+   - Collingwood Town Hall, 140 Hoddle Street, Abbotsford
+   - Richmond Town Hall, 333 Bridge Road, Richmond
+   - Hours: 9:00am - 5:00pm Monday to Friday
+
+3. By Mail: Cheque or money order
+   - Send to: Parking Administration, PO Box 168, Richmond VIC 3121
+   - Include reference number
+   - Allow time for processing
+
+4. By Phone: 1300 792 772
+   - Speak to agent
+   - Credit/Debit card payment
+
+Overdue Fines:
+If a fine becomes overdue:
+- Fines Victoria takes over collection
+- Additional enforcement charges may apply
+- Can impact credit rating
+- Escalates to recovery action
+
+Fines Victoria Contact: For queries about overdue fines
+
+[PARKING FINE LIFE CYCLE]
+
+1. Notice of Infringement
+   - Issued at time of parking violation
+   - Details of infringement on notice
+   - 28 days to pay or appeal
+
+2. Penalty Reminder Notice
+   - Issued if fine not paid within initial period
+   - Reminder to pay or appeal
+   - Additional details provided
+
+3. Demand Letter
+   - Final notice before escalation to Fines Victoria
+   - Last opportunity to pay through Council
+
+4. Fines Victoria Collection
+   - Transferred to state collection agency
+   - Enforcement action may follow
+   - Additional costs and charges apply
+
+Payment Plan:
+If you cannot pay immediately:
+- Once-off one-month extension available
+- 3-month extension if holding:
+  - Pensioner Concession Card, or
+  - DVA Card, or
+  - Health Care Card
+- Arrange through Council before penalty reminder
+
+[APPEALING A PARKING FINE]
+
+Grounds for Appeal:
+Valid reasons to appeal include:
+- Incorrect signage or unclear parking rules
+- Sign obscured or missing
+- Unreasonable time to read sign
+- Extenuating circumstances
+- Factual errors on notice
+
+How to Appeal:
+
+Online: Via Council website
+- Fastest option
+- Use reference number
+- Explain your grounds
+- Attach evidence if available
+
+By Mail:
+- Send written appeal to: Parking Administration, PO Box 168, Richmond VIC 3121
+- Include reference number and infringement details
+- Explain grounds for appeal
+- Attach supporting documents
+
+By Phone: 1300 792 772
+- Speak to agent about appeal process
+- Provide details of infringement
+
+Evidence to Include:
+- Photos of signage (if sign unclear)
+- Evidence of circumstances
+- Any extenuating factors
+- Correspondence about the matter
+
+Review Process:
+- Council reviews your appeal
+- Considers all evidence
+- Issues decision
+- Explains reasons for decision
+
+Timeline:
+- Reasonable timeframe to respond
+- Delays may incur additional charges
+- Decision provided in writing
+
+[PARKING PERMITS & PERMITS GENERAL]
+
+Parking Permit Types Available:
+
+Residential Permits:
+- For residents in permit-restricted streets
+- Restricted parking zones
+- Time-limited parking
+- Apply based on your residential address
+
+Visitor Permits:
+- For guests of residents
+- Limited duration
+- Can book for specific dates
+- Apply through resident's account
+
+Business Permits:
+- For commercial operators
+- Specific location restrictions
+- Seasonal or annual options
+- Apply based on business location
+
+Tradesperson Permits:
+- For trades working in restricted zones
+- Time-limited for duration of works
+- Apply for specific project
+- Proof of work required
+
+Medical Practitioner Permits:
+- For healthcare providers in restricted areas
+- Proof of professional registration required
+- For medical practice locations
+
+Live Music Permits:
+- For venues hosting live music
+- Specific hours and performance numbers
+- Application process through Council
+
+Permit Application Process:
+- Apply through Council website or in person
+- Provide proof of eligibility
+- Pay permit fee (check current fees)
+- Receive permit documentation
+- Display permit correctly in vehicle
+
+Contact for Permit Information:
+Phone: 03 9205 5555
+Email: parking@yarracity.vic.gov.au
+
+SOURCE_URL: https://www.yarracity.vic.gov.au/residents/transport/parking/parking-permits
+
+[PARKING ENFORCEMENT]
+
+Purpose:
+Council enforcement ensures fair access to parking and maintains safe, flowing traffic in busy inner-urban areas.
+
+Enforcement Activities:
+- Regular patrols of permit zones
+- Monitoring clearway areas
+- Checking time-limit compliance
+- Monitoring disabled parking zones
+- Reporting abandoned vehicles
+
+Reporting Illegal Parking:
+To report illegal parking:
+- Report online via Council website (preferred method)
+- Call 03 9205 5555
+- Provide: Location, vehicle details, nature of violation, date/time observed
+- Include photos if available
+
+Reporting Abandoned Vehicles:
+- Vehicles left unattended for extended period
+- Report via Council website
+- Provide: Location, vehicle details, when observed
+- Council arranges removal if vehicle truly abandoned
+
+Faulty Ticket Machines:
+- Report non-functioning parking meters
+- Report via Council website
+- Provide: Machine location, issue observed
+- Council arranges repair/maintenance
+
+Safety Parking Enforcement:
+Enforcement prioritizes:
+- Safe access (no obstruction of pedestrians)
+- Fair access (permit compliance)
+- Proper use (no disabled space misuse)
+- Traffic flow (clearway compliance)
+
+SOURCE_URL: https://www.yarracity.vic.gov.au/residents/transport/parking/parking-enforcement
+
+================================================================================
+SECTION 8: PLANNING & BUILDING
+================================================================================
+
+[PLANNING OVERVIEW]
+
+What is a Planning Permit?
+A planning permit is formal approval from Council to use land in a particular way or construct buildings. Some uses require planning approval; others don't. Permits ensure development is appropriate for the location, respects the heritage character, and meets standards.
+
+When Do You Need a Planning Permit?
+Common cases requiring permits:
+- Heritage changes (most common in Yarra)
+- Demolition
+- New construction or extensions
+- Subdividing land
+- Changing the use of land or buildings
+- Fencing
+- Tree removal
+- Decks and outdoor structures
+- Renovation and alterations
+- Solar panels
+- Signage
+
+Important Note (July 2025 Change):
+- As of 1 July 2025: Planning permit no longer required for liquor licensing applications
+- LCV (Liquor and Gambling Victorian) licence still required - this is state licensing, not Council approval
+- Other planning requirements still apply to the premises
+
+Cases that typically DON'T require planning permits:
+- Internal renovations not changing building structure
+- Painting and minor maintenance
+- Some minor garden works
+- Maintenance of existing structures
+
+CRITICAL: If in a heritage area, almost all exterior changes require permits.
+
+IMPORTANT: If you're unsure, ask Council before spending time and money on plans. It's always better to check first.
+
+[HERITAGE OVERLAY - CRITICAL FOR YARRA]
+
+Heritage Protection in Yarra:
+Yarra has extensive heritage overlay protection covering:
+- Historic buildings
+- Streetscape character
+- Culturally significant sites
+- Areas of architectural importance
+- Precinct-wide protections
+
+If Your Property Has Heritage Overlay:
+- External changes likely require planning permit
+- Interior changes usually not controlled
+- Demolition not permitted without approval
+- Tree removal may require approval
+- Fencing changes require consideration
+- Alterations must respect heritage character
+
+Check Your Property:
+Use VicPlan at vicplan.delwp.vic.gov.au to identify heritage overlays.
+
+Heritage Assessment:
+Professional heritage advice recommended for:
+- Any exterior work in heritage area
+- Understanding heritage requirements
+- Preparing documentation for Council
+- Understanding significance of building
+
+Heritage Consultants:
+Consider engaging heritage consultant for projects in heritage areas. Council may require heritage assessment report for permit applications.
+
+[APPLICATION PORTAL - YARRA eSERVICES & VICSMART]
+
+ALL planning applications in Yarra must be submitted via approved channels:
+
+Yarra eServices Portal:
+- Comprehensive applications
+- Complex projects
+- Heritage applications
+- Submit online with full documentation
+- Pay application fee
+
+VicSmart Portal:
+- For minor works only
+- Streamlined assessment
+- Faster processing for eligible works
+- Limited to low-impact changes
+
+Website: greenlight.vic.gov.au (some applications)
+Some applications through Council website directly.
+
+You cannot submit applications by mail, email, or in person. Online is mandatory.
+
+Contact for Portal Issues: planningadmin@yarracity.vic.gov.au, 9205 5555
+
+[PLANNING APPLICATION STEP-BY-STEP PROCESS]
+
+Step 1: Research Your Property
+Before preparing plans, understand your property constraints:
+- Check property title: Obtain from LANDATA or your conveyancer
+- Check zoning: Use VicPlan at vicplan.delwp.vic.gov.au
+- Check overlays: Look for Heritage, Environmental Audit, Inundation, Special Building
+- Check for covenants: Listed on title; not administered by Council
+- Check restrictions: Any encumbrances affecting the property
+- Understand relevant planning scheme provisions
+
+Essential Tools:
+- Title search (LANDATA.com.au)
+- VicPlan (vicplan.delwp.vic.gov.au) for zoning and overlays
+- Yarra Planning Scheme: Available on Council website
+
+Step 2: Get Professional Advice
+For most applications, professional help is valuable:
+- Architect for houses and complex designs
+- Planning consultant for complex applications
+- Heritage consultant for heritage area projects
+- Town planner for land use questions
+- Surveyor for boundary and subdivision work
+
+Why: Professionals know what Council looks for and can increase approval chances and speed processing. Especially important in Yarra's heritage areas.
+
+Step 3: Pre-Application Meeting (Recommended)
+- Contact Council to request pre-application discussion
+- Discuss proposal informally before formal application
+- Get feedback on likely issues
+- Clarify requirements
+- Meet with planning officer
+- Saves time and rework later
+
+Contact: planningadmin@yarracity.vic.gov.au or 03 9205 5555
+Response: Usually within 5 business days for appointment
+
+Step 4: Site Analysis
+Document your property thoroughly:
+- Photographs of existing buildings and site
+- Measurements and dimensions
+- Existing vegetation and trees
+- Views and solar access
+- Drainage patterns
+- Access points and driveways
+- Heritage character and streetscape
+- Neighboring properties and impacts
+
+Step 5: Prepare Plans
+Council requires specific plans depending on application type. Standard requirements:
+- Site Plan: Shows property boundaries, building locations, access, parking
+- Floor Plans: Interior layout showing room names and dimensions
+- Elevations: Drawings showing building heights and appearance from different angles
+- Cross-sections: Show ground levels, building heights
+- Heritage Assessment (if applicable): For projects in heritage areas
+- Design Statement: Explaining how proposal meets planning requirements
+
+Plans must be to scale and clearly labeled. Sketch plans rarely acceptable for full applications.
+
+Step 6: Submit via Approved Portal
+- Create account at portal (Yarra eServices or VicSmart as applicable)
+- Complete all required fields
+- Attach all required documents as PDFs
+- Pay application fee (check Council Fees & Charges page)
+- Submit and retain reference number
+- Receive confirmation email
+
+Processing starts when payment is received.
+
+[YARRA-SPECIFIC PLANNING OVERLAYS & ZONES]
+
+Overlays Affecting Many Properties:
+
+Heritage Overlay:
+- Covers significant percentage of Yarra
+- Requires approval for exterior changes
+- Protects historic buildings and areas
+- Applies across multiple precincts
+
+Environmental Audit Overlay:
+- Applies to properties with potential contamination history
+- May require environmental audit before sensitive uses
+- Industrial land conversions need assessment
+
+Land Subject to Inundation Overlay:
+- Applies to flood-prone areas
+- May restrict development
+- Requires flood assessment for some projects
+- Stormwater management considerations
+
+Special Building Overlay:
+- Applies to bushfire or other hazard-prone areas
+- Building design requirements apply
+- May require specialist assessments
+
+[PLANNING APPLICATION ASSESSMENT PROCESS]
+
+Step 1: Preliminary Assessment
+- Council reviews application for completeness
+- Requests additional information if needed
+- Clarifies any unclear aspects
+
+Step 2: Notification & Referrals (14 days)
+- Notification sent to affected neighbors
+- Internal department referrals
+- External agency referrals (if required)
+- Heritage consultation (if applicable)
+- Disability standards review
+
+Step 3: Post-Notification
+- Council considers any submissions
+- Addresses issues raised by neighbors
+- Works with applicant to resolve concerns
+
+Step 4: Assessment
+- Detailed planning assessment
+- Consideration of planning scheme requirements
+- Heritage assessment (if applicable)
+- Comparison with planning policy
+- Officer recommendation
+
+Step 5: Decision
+- Approval with conditions, or
+- Refusal with reasons, or
+- Request for information/amendments
+- Decision letter provided
+
+Step 6: Appeal Period
+- VCAT appeal available within 28 days
+- Contact VCAT if unhappy with decision
+- VCAT provides independent review
+
+[BUILDING PERMITS & BUILDING SURVEYOR]
+
+Building Permits Separate from Planning:
+- Planning permit addresses land use and development appropriateness
+- Building permit addresses technical compliance with Building Code
+- Both may be required for same project
+- Building surveyor handles building permit (not Council)
+
+When Building Permit Required:
+- New buildings
+- Structural alterations
+- Extensions
+- New decks/verandas
+- Renovations affecting building structure
+- Swimming pools and spas
+- Interior walls and partitions (sometimes)
+- Accessible upgrades
+
+When Building Permit NOT Required:
+- Internal non-structural work
+- Painting and finishes
+- Minor maintenance
+- Replacement of existing items with same specifications
+
+Finding a Building Surveyor:
+- Licensed professionals conduct building permits
+- Search online for local building surveyors
+- Multiple surveyors available in Yarra area
+- Compare fees and experience
+
+Building Permit Application:
+- Apply to building surveyor (not Council)
+- Surveyor lodges on your behalf
+- Pay surveyor fees
+- Building work must comply with Building Code of Australia
+
+Contact for Information:
+- Building Code of Australia questions: Victorian Building Authority
+- Building surveyor licensing: Victorian Building Authority
+
+SOURCE_URL: https://www.yarracity.vic.gov.au/planning-and-building/planning-permits
+SOURCE_URL: https://www.yarracity.vic.gov.au/planning-and-building/planning-permits/frequently-asked-questions
+
+================================================================================
+SECTION 9: LIBRARIES & COMMUNITY SERVICES
+================================================================================
+
+[YARRA LIBRARIES OVERVIEW]
+
+Free Membership:
+All Yarra residents can join for free:
+- Library card needed for borrowing
+- Online registration available
+- In-person registration at any branch
+- Immediate access to digital resources
+
+Library Locations:
+Five library branches serve Yarra:
+- Richmond Library
+- Collingwood Library
+- Carlton Library
+- Fitzroy Library
+- Bargoonga Nganjin Library (North Fitzroy)
+
+For specific addresses and hours, visit: www.yarracity.vic.gov.au/our-libraries
+
+Online Services:
+- Catalogue search: www.yarracity.vic.gov.au/our-libraries
+- Digital collection access
+- Account management
+- Request and reserve items
+- Extend loan periods online
+
+SOURCE_URL: https://www.yarracity.vic.gov.au/our-libraries
+
+[LIBRARY SERVICES & PROGRAMS]
+
+Collections & Borrowing:
+- Physical collection: Books, DVDs, music, games
+- Digital collection: eBooks, audiobooks, magazines
+- Interlibrary loans: Access to resources beyond Yarra
+- No fines policy: Overdue items accommodated
+
+Technology & Access:
+- Free computer use and internet access
+- Wi-Fi available at all branches
+- Printing and scanning services
+- Photocopying services
+- Accessibility features for people with disabilities
+
+Recreation & Learning:
+- Gaming consoles: PlayStation 4, Nintendo Switch
+- Study rooms available for booking
+- Free training and digital help services
+- One-on-one technology support
+
+Special Collections & Services:
+- Library of Things: Borrow items instead of buying
+- Home library service: Books delivered to home-bound residents
+- iPad lending program: For 55+ and people with disability
+- Community pantry: At Bargoonga Nganjin Library
+
+Library Programs:
+- Book discussion groups
+- Author talks and literary events
+- Children's programs and storytime
+- Youth programs and events
+- Digital help workshops
+- History and local studies support
+- Fitzroy Writers Festival
+
+[OPEN LIBRARY ACCESS]
+
+Extended Hours:
+Selected library locations offer extended access outside normal hours:
+- Card access to library spaces
+- Self-service borrowing capabilities
+- Use study rooms and computers
+- Access to facilities for early/late patrons
+
+Locations with Open Library: Check website for participating branches and access details.
+
+SOURCE_URL: https://www.yarracity.vic.gov.au/our-libraries/our-services
+
+================================================================================
+SECTION 10: LEISURE & RECREATION FACILITIES
+================================================================================
+
+[YARRA LEISURE CENTRES]
+
+Comprehensive Recreation Services:
+Yarra operates leisure centres and recreation facilities serving all ages and abilities.
+
+Major Facilities:
+
+Collingwood Leisure Centre (Clifton Hill):
+- Family-friendly fitness facility
+- Pool and aquatic programs
+- Gym and fitness classes
+- Casual and member access
+- Free 1-day trial
+
+Richmond Recreation Centre:
+- All-abilities and all-ages programs
+- Inclusive recreation services
+- Disability support services
+- Community programs
+- Accessible facilities
+
+Fitzroy Swimming Pool:
+- Iconic outdoor swimming pool
+- Summer facility (seasonal opening)
+- Popular community gathering place
+- Public swimming and lessons
+- Family-friendly environment
+
+Collingwood Estate Gym:
+- Fitness and gym services
+- Group fitness classes
+- Personal training available
+- Equipment and facilities
+
+Burnley Golf Course:
+- 9-hole golf course
+- 5km from CBD
+- Public play available
+- Golf lessons and coaching
+- Casual and member options
+
+[LEISURE MEMBERSHIP & ACCESS]
+
+Membership Options:
+- Annual memberships with discounts
+- Casual visit pricing
+- Group memberships
+- Family packages
+- Off-peak discounts
+- Concession rates for eligible groups
+
+Free Trial:
+- 1-day free trial for new members
+- Experience facilities before committing
+- Available at most facilities
+
+Programs:
+- Gym and fitness classes
+- Swimming lessons for all ages
+- Aqua fitness programs
+- Wellness classes
+- Sports coaching
+
+[ACCESS ALL ABILITIES PROGRAMS]
+
+Empower Program:
+- Fitness program for people with disability
+- Tailored to individual needs
+- Supportive environment
+- Professional guidance
+- Community integration focus
+
+Adaptive Swim Program:
+- For children with disability (age 5+)
+- Individualized instruction
+- Supportive aquatic environment
+- Accessibility features
+- Professional instructors
+
+General Accessibility:
+- Wheelchair accessible facilities
+- Accessible parking
+- Accessible change rooms
+- Mobility support services
+- Sensory support where available
+
+[FACILITY HIRE]
+
+Room and Space Hire:
+- Meeting rooms available for hire
+- Community group bookings
+- Commercial event use
+- Sports and recreation hire
+
+Public Liability Insurance:
+- Required for all commercial hire
+- Public liability certificate needed
+- Private hire may have lower requirements
+- Contact facility for specific requirements
+
+Contact:
+Phone: 03 9205 5555
+Visit: www.yarracity.vic.gov.au/yarra-leisure
+
+SOURCE_URL: https://www.yarracity.vic.gov.au/yarra-leisure
+SOURCE_URL: https://www.yarracity.vic.gov.au/yarra-leisure/locations
+
+================================================================================
+SECTION 11: FAMILY & CHILDREN'S SERVICES
+================================================================================
+
+[CHILDCARE & KINDERGARTEN SERVICES]
+
+Types of Care Available:
+- Long day care (full-time care)
+- Occasional care (flexible hours)
+- Kindergarten programs (3 and 4 year olds)
+- Flexible and part-time options
+
+Locations Across Yarra:
+Centres operate in:
+- Fitzroy area
+- Collingwood area
+- North Carlton area
+- Richmond area
+- Multiple neighborhood house locations
+
+Child Care Subsidy (CCS):
+- Federal government subsidy available
+- Reduces out-of-pocket costs
+- Application through Services Australia
+- Eligibility criteria apply
+- Council services operate under subsidy scheme
+
+Enrollment & Costs:
+- Contact individual centres for availability
+- Fees vary by service type
+- Subsidy reduces out-of-pocket amount
+- Waiting lists common in Yarra
+
+Contact Council for Service Directory: 03 9205 5555
+
+[MATERNAL & CHILD HEALTH SERVICE]
+
+Free Service Overview:
+Maternal & Child Health (MCH) is a free service for families with children from birth to school age.
+
+MCH Services Include:
+- Health and development checks
+- Breastfeeding support and advice
+- Sleep and settling assistance
+- First-time parent group support
+- Immunisation information and support
+- Referrals to other services
+- Parent education programs
+- Growth monitoring
+
+MCH Booking Line: 03 9205 5599
+Email: mch@yarracity.vic.gov.au
+24/7 MCH Helpline: 132229 (Victorian state service)
+
+MCH Centres Across Yarra:
+Eight MCH centres located in:
+- Abbotsford
+- Alphington
+- Collingwood
+- Fitzroy
+- Fitzroy North
+- Princes Hill
+- North Richmond
+- South Richmond
+
+For specific addresses and appointment times, visit Council website.
+
+MCH Programs:
+- Individual health checks
+- First-time parent groups
+- Mother and baby groups
+- Developmental screening
+- Breastfeeding support clinics
+- Immunisation drop-in clinics
+- Parenting workshops
+
+Developmental Concerns:
+MCH can refer to early intervention services if developmental concerns identified.
+
+SOURCE_URL: https://www.yarracity.vic.gov.au/residents/child-youth-and-family-services/family-and-children
+SOURCE_URL: https://www.yarracity.vic.gov.au/residents/child-youth-and-family-services/family-and-children/maternal-and-child-health
+
+[IMMUNISATION SERVICES]
+
+Free Drop-In Immunisation:
+- Free vaccinations for children
+- Drop-in service (no appointment needed)
+- Clinic locations across Yarra
+- Regular session times
+
+Clinic Locations:
+Multiple locations include:
+- Fitzroy area
+- Richmond area
+- Collingwood area
+- Alphington area
+- Other community locations
+
+For specific clinic locations and times, visit: www.yarracity.vic.gov.au
+
+Professional Advice:
+- Qualified nurses administer vaccines
+- Information about immunisation provided
+- Questions answered
+- Referrals if needed
+- Part of child health system
+
+[PLAYGROUPS & TOY LIBRARIES]
+
+Community Playgroups:
+- Parent-facilitated groups for young children
+- Social development and play
+- Parent connection and support
+- Various locations across Yarra
+- Inclusive and welcoming
+
+Toy Libraries:
+Locations in:
+- Alphington
+- Collingwood
+- Fitzroy
+- Richmond
+
+Services:
+- Toy borrowing to take home
+- Play space access
+- Parent support
+- Educational toy selection
+- Cost-effective toy access
+
+[NEIGHBOURHOOD HOUSES & LEARNING CENTRES]
+
+Community Hubs:
+- Neighbourhood houses throughout Yarra
+- Learning and community programs
+- Adult education classes
+- Community events and activities
+- Support services coordination
+- Culturally inclusive services
+
+Programs Offered:
+- Language and literacy classes
+- Digital skills
+- Personal development
+- Community events
+- Support groups
+- Social connection
+
+[FAMILY SUPPORT PROGRAMS]
+
+Inclusion Support:
+Services for families of children with additional needs:
+- Early intervention support
+- Therapy coordination
+- Support for developmental delay
+- Disability support services
+- Inclusive program participation
+
+Family Support:
+- Parenting support programs
+- Crisis support services
+- Family counselling referrals
+- Financial hardship support
+- Community connection services
+
+Contact: 03 9205 5555 or info@yarracity.vic.gov.au
+
+================================================================================
+SECTION 12: CLIMATE, SUSTAINABILITY & ENVIRONMENTAL PROGRAMS
+================================================================================
+
+[CLIMATE EMERGENCY & YARRA'S COMMITMENT]
+
+Declared Climate Emergency:
+Yarra City Council declared a climate emergency recognizing:
+- Urgent need for climate action
+- Council responsibility to lead
+- Community commitment to sustainability
+- Need for systemic change
+
+Climate Emergency Plan 2024-2030:
+Council has adopted comprehensive 7-year plan with 7 key transformations:
+
+1. Governance Transformation
+   - Council leadership in climate action
+   - Resource allocation for sustainability
+   - Policy alignment with climate goals
+   - Accountability and monitoring
+
+2. Equity Transformation
+   - Just transition ensuring community support
+   - Protecting vulnerable populations
+   - Equitable access to services
+   - Community engagement and participation
+
+3. Advocacy Transformation
+   - Council advocacy for climate action
+   - Collaboration with state/federal
+   - Community representation
+   - Policy advocacy
+
+4. Net Zero by 2035 Transformation
+   - Council operations net zero by 2035
+   - Community support toward net zero
+   - Emissions reduction targets
+   - Renewable energy transition
+
+5. Traditional Owners Partnership Transformation
+   - Collaboration with Bunurong and Wurundjeri peoples
+   - Traditional ecological knowledge integration
+   - Country stewardship
+   - Cultural respect and support
+
+6. Climate-Safe Buildings Transformation
+   - Retrofit of existing buildings
+   - Energy efficiency improvements
+   - Climate adaptation
+   - Sustainable materials use
+
+7. Circular Economy Transformation
+   - Reduce consumption and waste
+   - Reuse and repair culture
+   - Resource efficiency
+   - Waste reduction programs
+
+Key Achievements 2024-25:
+- 54 households completed energy upgrades
+- 3,007 people participated in climate events
+- 8 fast EV chargers installed across Yarra
+- 892 indigenous trees planted for biodiversity
+- Ongoing greenhouse gas emissions reduction
+- Community engagement in climate action
+
+[COUNCIL OPERATIONS SUSTAINABILITY]
+
+Renewable Energy:
+- Council powered by 100% renewable electricity (MREP - Melbourne Renewable Energy Project)
+- Multi-year commitment to renewable sources
+- Cost-competitive with conventional energy
+- Reduces council carbon footprint
+
+Solar Energy:
+- Nearly 3,000 solar panels installed
+- Across 42 council buildings
+- Reduces energy consumption
+- Local renewable generation
+- Supports grid stability
+
+Gas Phase-Out:
+- 28 council buildings transitioned from gas to all-electric
+- Reduces gas consumption
+- Shifts to cleaner energy sources
+- Supports electrification goals
+- Reduces operating costs long-term
+
+Electric & Hybrid Fleet:
+- 3 electric tipper trucks for waste collection
+- 1 electric street sweeper
+- 48 hybrid and electric cars in fleet
+- Reduces transport emissions
+- Supports local air quality
+
+[CLIMATE ACTION PROGRAMS FOR COMMUNITY]
+
+Climate Safe Rooms Program:
+- Home retrofits for climate resilience
+- Cooling and heat management
+- Energy efficiency improvements
+- Comfort and wellbeing focus
+- Support for vulnerable residents
+- Subsidized or funded retrofits
+
+Yarra Home Energy Upgrade:
+- Subsidized home efficiency programs
+- Insulation and weatherization
+- Heating and cooling improvements
+- Hot water system upgrades
+- Grants and financing options
+- Professional installation
+
+Climate Voice Program:
+- Community advocacy for climate action
+- Resident engagement in planning
+- Policy feedback opportunity
+- Community leadership development
+- Amplify resident concerns
+
+Electrify Yarra Program:
+- Support for residential electrification
+- Gas to electric transitions
+- Heating and cooking equipment upgrades
+- Heat pump installations
+- Information and rebate programs
+- Community events and workshops
+
+Library of Things:
+- Borrow items instead of buying
+- Reduce consumption and waste
+- Community sharing
+- Cost savings
+- Environmental benefit
+- Accessible resource
+
+[YARRA ENERGY FOUNDATION]
+
+Independent Council-Funded Organization:
+- Not-for-profit energy organization
+- Council-funded but independent
+- Community energy projects
+- Renewable energy advocacy
+- Research and innovation
+- Education and training
+
+Services:
+- Community energy projects
+- Renewable energy information
+- Energy efficiency advice
+- Advocacy for clean energy
+- Building community capacity
+
+Contact: Check Council website for YEF details
+
+[ENVIRONMENTAL MANAGEMENT & PLANNING]
+
+Integrated Water Management Plan:
+- Sustainable water use
+- Stormwater management
+- Water quality protection
+- Flooding and drought preparedness
+- Community engagement
+- Climate adaptation planning
+
+Green Infrastructure:
+- Tree planting programs
+- Urban forest expansion
+- Biodiversity support
+- Cool pavements and surfaces
+- Permeable surfaces
+- Wetland and creek restoration
+
+Environmental Standards:
+- Development environmental assessment
+- Contaminated land management
+- Air and noise standards
+- Water quality protection
+- Biodiversity protection
+- Heritage environment protection
+
+SOURCE_URL: https://www.yarracity.vic.gov.au/climate-and-sustainability/council-taking-climate-action
+SOURCE_URL: https://www.yarracity.vic.gov.au/climate-and-sustainability/take-community-action/climate-action-and-advocacy
+
+================================================================================
+SECTION 13: PETS & ANIMAL MANAGEMENT
+================================================================================
+
+[PET REGISTRATION OVERVIEW]
+
+Legal Requirement:
+All dogs and cats must be registered with Yarra City Council. Registration is a legal requirement that protects pets and the community.
+
+Registration Details:
+- Required for all dogs and cats
+- Microchipping and desexing mandatory
+- Annual renewal required
+- Non-compliance can result in fines
+
+Maximum Animals:
+Dogs: Maximum 2 in a house, 1 in a unit/flat without special permit
+Cats: Maximum 2 in a house, 1 in a unit/flat without special permit
+
+Excess Animal Permit:
+- Available if you want to keep more than maximum
+- Application to Council
+- Council assessment based on circumstances
+- Fee may apply
+
+[HOW TO REGISTER PETS]
+
+Registration Application Options:
+1. Online: Register via Council website (fastest option)
+2. In Person: Visit customer service centres
+3. By Mail: Request form from Council
+4. By Phone: Call 03 9205 5555 for guidance
+
+Information Needed:
+- Pet name, breed, age, colour/description
+- Microchip number (required)
+- Your contact details and property address
+- Proof of desexing (required)
+- Proof of vaccination (current)
+
+Processing:
+- Online: Usually same day
+- In person: Same day
+- By mail: 5-7 working days
+
+Cost: Check Council Fees & Charges page for registration fees
+
+[MICROCHIPPING & DESEXING REQUIREMENTS]
+
+Microchipping - Mandatory:
+- Required for all dogs and cats
+- Permanent identification implanted under skin
+- Provides lifelong identification if lost
+- Available from veterinary clinics
+- Cost: Approximately $50-80 (through vet)
+- National database links pet to owner
+
+Desexing - Mandatory:
+- Required for all registered dogs and cats
+- Veterinary surgical procedure
+- Improves animal health and behavior
+- Reduces population issues
+- Cost: Varies by vet, $300-800+ depending on animal and vet
+- Financial assistance may be available
+
+Registration Tag:
+- Supplied with registration
+- Must be worn on collar at all times
+- Shows registration number and Council contact
+- Helps reunite lost pets with owners
+- Legally required during public outings
+
+[KEEPING CATS SAFELY]
+
+Indoor Cat Keeping:
+Council encourages keeping cats indoors, particularly 7pm to 7am, to:
+- Protect native wildlife
+- Reduce cat injuries and disease
+- Support biodiversity
+
+Wildlife Protection:
+- Cats are predators of native birds and small animals
+- Community responsibility to protect native species
+- Indoor cats have longer, healthier lives
+- No outdoor risks (cars, disease, fights)
+
+Housing Requirements:
+- Secure enclosure or catio recommended
+- Safe outdoor spaces (enclosed patios)
+- Indoor enrichment essential
+- Veterinary care important
+
+[KEEPING DOGS SAFELY]
+
+Dog Control Requirements:
+- Dogs must be under effective control at all times
+- Comes when called
+- Doesn't approach people or other animals aggressively
+- Stays near owner
+- Not a threat to public safety
+
+On-Lead & Off-Lead Areas:
+Dogs must be on-lead (leash) in:
+- Public spaces and parks
+- Town centers
+- Areas marked as on-lead zones
+- Near playgrounds and family facilities
+
+Dogs can be off-lead only on:
+- Owner's property
+- Designated dog parks
+- Remote public areas (not populated)
+
+[LOST & STRAY PETS]
+
+If Your Pet is Lost:
+1. Search your immediate area first (most pets found nearby)
+2. Contact Council: 03 9205 5555
+   - Provide: Pet name, breed, colour, microchip number
+   - Ask if matching pet has been picked up
+3. Contact local veterinary clinics
+4. Post on community social media groups
+5. Check Lost Dogs' Home for found dogs
+
+If You Find a Lost Pet:
+1. Get the pet to safety
+2. Check for tags and read microchip (at vet)
+3. Contact Council: info@yarracity.vic.gov.au or 03 9205 5555
+   - Provide: Animal description, location found, tag information
+4. Contact local vets to report found pet
+5. Council holds pet for reclaim period
+
+Council's Role with Found Pets:
+- Holds found pets for 8-day reclaim period (legal requirement)
+- Owner can reclaim with proof of ownership
+- Release fee applies for unclaimed pets
+- Additional fee if pet requires emergency registration
+- After reclaim period, Council rehomes or refers to rescue
+
+Animal Welfare:
+- Report animal welfare concerns to RSPCA: 03 9224 2222
+- Council coordinates with RSPCA on welfare matters
+- Duty of care applies to all animal owners
+
+[ANIMAL WELFARE & BEHAVIOR ISSUES]
+
+Barking Dogs:
+If a neighbour's dog is barking:
+1. Try friendly conversation with neighbour first (often most effective)
+2. Document the problem:
+   - Record every incident: date, time, duration, impact
+   - Keep log for 7 days
+3. Report to Council:
+   - Online via website (preferred)
+   - Phone: 03 9205 5555
+   - Email: info@yarracity.vic.gov.au
+
+Council Response:
+- Investigates based on evidence
+- Contacts dog owner to discuss
+- Can issue notice requiring noise control
+- Persistence or refusal leads to further action
+- Goal is resolution, not punishment
+
+Dog Attacks:
+- Report immediately to Council
+- Seek medical attention if injured
+- Council may take action
+- Police involvement for serious incidents
+
+[DOMESTIC ANIMAL MANAGEMENT PLAN 2026-2029]
+
+Council's Animal Management Strategy:
+Comprehensive plan governing:
+- Pet registration and identification
+- Animal welfare standards
+- Loose animal procedures
+- Dangerous and restricted breeds
+- Barking and animal noise
+- Lost and found pet procedures
+- Community animal services
+- Enforcement actions
+
+Available from: Council website
+Questions: Contact 03 9205 5555 or info@yarracity.vic.gov.au
+
+SOURCE_URL: https://www.yarracity.vic.gov.au/residents/pets-and-animals
+
+================================================================================
+SECTION 14: LOCAL LAWS & COMMUNITY STANDARDS
+================================================================================
+
+[LOCAL LAWS OVERVIEW]
+
+Community Local Law Provisions:
+Local laws are rules made by Council to protect health, safety, amenity, and environment. They apply to everyone and are enforceable.
+
+Key Areas Covered:
+- Alcohol in public places
+- Camping and temporary accommodation
+- Dumped rubbish and cleanliness
+- Open air burning and fire safety
+- Obstructions on public land
+- Overhanging vegetation
+- Unsightly property conditions
+- Noise and amenity issues
+
+[ALCOHOL IN PUBLIC PLACES]
+
+Alcohol-Free Zones:
+Alcohol is prohibited in the following public spaces:
+
+1. All Parks: 9pm to 9am daily
+   - No alcohol in any public park
+   - Year-round restriction
+   - Applies to all beverages containing alcohol
+
+2. Footpaths: Next to open licensed venues
+   - Immediately adjacent to bars, clubs, pubs
+   - Prevents glass and litter issues
+   - Safety for patrons
+
+3. Family Facility Entrances: Within 10m
+   - Includes schools, libraries, playgrounds
+   - Protects children and families
+   - Buffer zone from alcohol venues
+
+4. Roads and Vehicles: No alcohol on roads or in vehicles
+   - Public consumption prohibited
+   - Vehicle drinking prohibited (open container)
+
+Special Alcohol-Free Zones:
+
+Swan Street (Grand Final Weekend):
+- AFL Grand Final weekend restrictions
+- Prevents excessive street drinking
+- Community safety measure
+- Specific dates each year
+
+New Year's Eve:
+- All public places alcohol-free from 9pm Dec 30 to 9am Jan 1
+- Protects safety during celebrations
+- Prevents street disorder
+- Community health focus
+
+Penalties:
+- Fines for alcohol possession in restricted zones
+- Confiscation of beverages
+- Potential further action for repeat offences
+- Educational approach with first offenders
+
+[OPEN AIR BURNING & FIRE SAFETY]
+
+Prohibited Without Permit:
+Open air burning is an offence unless you have a permit from Council:
+- Fires in open air
+- Burning grass, leaves, wood
+- Rubbish burning
+- Controlled fires
+
+Exemptions (No Permit Required):
+- BBQs and outdoor cooking
+- Pizza ovens in private yards (certain conditions)
+- Chimineas (portable fire containers, certain conditions)
+- Licensed entertainment uses
+
+Permit Process:
+- Apply to Council for burning permit
+- Specify: Type of material, quantity, date/time
+- Council assesses: Wind, drought, fire danger period
+- Permit issued if safe to proceed
+- Conditions may apply
+
+Fire Danger Period:
+- October to May (dates vary by year)
+- Restrictions more stringent during fire danger season
+- Council declarations observed
+
+Contact: 03 9205 5555 for permit information
+
+[NOISE COMPLAINTS]
+
+Types of Noise Covered:
+- Residential noise (from homes, yards)
+- Commercial noise (from businesses)
+- Traffic and transport noise
+- Construction noise
+- Party and event noise
+- Animal noise (covered under animal management)
+
+Residential Noise Complaints:
+Contact: Yarra City Council
+- Report online via website (preferred)
+- Phone: 03 9205 5555
+- Email: info@yarracity.vic.gov.au
+- Provide: Address of noise, type, date, time, impact
+- Keep log of incidents
+
+Council Investigation:
+- Investigates noise complaints
+- Measures noise levels if needed
+- Contacts party responsible
+- Can issue notice to reduce noise
+- Further action for non-compliance
+
+One-Off Parties:
+If a single party is creating excessive noise:
+- Contact Victoria Police (non-emergency)
+- Phone: 03 9205 5555 for Council follow-up
+- Document impact
+- Police can attend and enforce
+
+Commercial Noise:
+- Report to Council
+- Business operating hours restrictions apply
+- Council assesses against noise standards
+- Negotiation and enforcement options
+
+Building Works Hours:
+Clause 49 of General Local Law restricts building works hours:
+- Weekday working hours specified
+- Weekend restrictions apply
+- Public holiday restrictions
+- Exceptions for certain essential works
+- Permits may allow extended hours
+
+Overhanging Vegetation Restriction:
+- Overhanging tree branches must be cleared
+- 2.4 metres minimum clearance from road/footpath
+- Prevents obstruction and safety issues
+- Homeowner responsibility for maintenance
+- Can report overgrown vegetation to Council
+
+[FINE PAYMENT & APPEALS]
+
+Payment Methods:
+Fines for local law breaches can be paid:
+- Online via Council website
+- By phone: 03 9205 5555
+- In person at customer service centres
+- By mail: PO Box 168, Richmond
+
+Appeal Process:
+- Grounds for appeal available
+- Written appeal to Council
+- Explain reason for appeal
+- Provide evidence supporting appeal
+- Council reviews and responds
+
+Payment Plans:
+- May be available for larger fines
+- Contact Council to discuss
+- Arrange before fine escalates
+
+SOURCE_URL: https://www.yarracity.vic.gov.au/about-us/council-mayor-and-councillors/governance/local-laws
+SOURCE_URL: https://www.yarracity.vic.gov.au/about-us/council-mayor-and-councillors/governance/local-laws/noise-complaints
+
+================================================================================
+SECTION 15: COMPREHENSIVE SERVICES DIRECTORY
+================================================================================
+
+ALL COUNCIL SERVICES BY CATEGORY:
+
+Parking and Transport Services:
+- Pay parking fine online or in person
+- Appeal parking fine
+- View infringement photos
+- Get infringement life cycle information
+- Apply for residential parking permit
+- Apply for visitor parking permit
+- Apply for business parking permit
+- Apply for tradesperson parking permit
+- Apply for medical practitioner permit
+- Apply for live music venue permit
+- Report illegal parking
+- Report abandoned vehicle
+- Report faulty parking meter
+- Parking fine payment plans
+- Parking enforcement information
+- View parking maps and zones
+- Accessible parking information
+
+Waste, Recycling and Graffiti Removal:
+- Report missed bin collection
+- Report damaged bin
+- Report dumped rubbish
+- Apply for new or additional bin
+- Request hard rubbish collection (max 2 per year)
+- Information on 4-bin system (red/yellow/purple/green lids)
+- FOGO composting information
+- Recycling guidelines
+- Transfer station information
+- Drop-off facility locator
+- Waste reduction advice
+- Hazardous waste disposal
+- E-waste disposal
+- Report graffiti vandalism
+- Graffiti removal request
+- Illegal dumping investigation
+- Community clean-up programs
+
+Rates, Valuations and Financial Services:
+- Pay rates online or in person
+- Set up eRates account
+- Enquire about rates
+- Obtain copy of rates notice
+- Set up direct debit (FlexiPay)
+- Change property details
+- Apply for pensioner rebate
+- Apply for managing agent authority
+- Financial hardship assistance
+- Dispute a rates assessment
+- Query valuation (through Valuer-General)
+- Understand CIV calculation
+- Query payment plans
+- View payment history
+
+Local Laws Compliance:
+- Report illegal parking
+- Report alcohol in public place
+- Report open air burning (non-permitted)
+- Report noise complaint
+- Report overhanging vegetation
+- Report dumped rubbish
+- Report unsightly property
+- Appeal local law fine
+- Pay local law fine
+
+Business Permits and Approvals:
+- Apply for business registration
+- Apply for business parking permit
+- Apply for food service permit
+- Apply for outdoor dining area permit
+- Apply for shop sign approval
+- Apply for liquor licence (no planning permit needed as of 1 July 2025)
+- Enquire about business compliance
+- Report illegal business activity
+- Get business license information
+- Check compliance requirements
+
+Planning, Building and Construction:
+- Apply for planning permit via eServices or VicSmart
+- Get pre-application planning advice
+- Search property zoning information
+- Check heritage overlay status
+- View planning scheme provisions
+- Apply for building permit (via surveyor)
+- Find building surveyor contacts
+- Check building compliance
+- Appeal planning decision
+- Request Certificate of Title
+- Get building code information
+- Check environmental audit overlay
+- Enquire about extensions and renovations
+- Get advice on subdivision
+- Query development requirements
+
+Road and Street Maintenance:
+- Report pothole
+- Report street damage
+- Report footpath damage
+- Report street furniture damage (seats, bins)
+- Report street tree damage
+- Request street sweeping
+- Report street lighting issue
+- Report traffic light malfunction
+- Report road safety issue
+- Report street obstruction
+- Request drainage maintenance
+- Report flooding on street
+
+Animals and Pets:
+- Register dog or cat
+- Renew pet registration
+- Apply for excess animal permit
+- Report stray animal
+- Report lost pet
+- Report found pet
+- Report barking dog
+- Report dog attack
+- Report dangerous animal
+- Report animal welfare concern
+- Query on-lead zone areas
+- Get pet registration proof
+
+Trees, Parks and Public Spaces:
+- Request tree pruning or removal
+- Report dangerous tree
+- Report illegal tree removal
+- Apply for tree removal permit
+- Request tree planting
+- Report park maintenance issue
+- Report playground damage
+- Request park cleanup
+- Get park usage information
+- Enquire about park hire/events
+- Report environmental issue
+- Report invasive species
+- Request open space maintenance
+
+Family and Children's Services:
+- Enroll in childcare center
+- Enroll in kindergarten program
+- Book MCH (Maternal & Child Health) appointment
+- Call MCH helpline (132229)
+- Attend immunisation drop-in clinic
+- Enquire about playgroups
+- Access toy library
+- Join neighbourhood house programs
+- Apply for child care subsidy information
+- Report child welfare concern
+- Get parenting support information
+- Access early intervention services
+
+Community Safety and Wellbeing:
+- Report crime or emergency (000)
+- Report community safety concern
+- Enquire about neighbourhood watch
+- Access domestic violence support
+- Report anti-social behavior
+- Get mental health support information
+- Access community health services
+- Report elder abuse
+- Get disability support information
+- Access emergency relief
+
+Ageing and Disability Services:
+- Access home care services
+- Get mobility support information
+- Apply for home modification funding
+- Access aged care information
+- Get disability support services
+- Access inclusive recreation programs
+- Get accessibility information
+- Request transport assistance
+- Access support groups
+
+Arts and Culture:
+- Attend library-hosted author talks
+- Participate in community cultural events
+- Access arts venue information
+- Get information on local heritage sites
+- Attend heritage walks or tours
+
+Council, Governance and Enquiries:
+- Make general enquiry
+- Submit freedom of information request
+- File a formal complaint
+- Attend council meeting
+- Submit a council petition
+- Get council meeting agendas and minutes
+- Contact councillor
+- Request official information
+- Appeal council decision
+
+Venue Bookings and Events:
+- Book council venue for event
+- Book library study room
+- Book library meeting room
+- Request community event support
+- Get event permit information
+
+SOURCE_URL: https://www.yarracity.vic.gov.au/services
+
+================================================================================
+SECTION 16: CONTACT DIRECTORY & ONLINE SERVICES
+================================================================================
+
+[MAIN CONTACT INFORMATION]
+
+General Enquiries:
+Phone: 03 9205 5555
+Email: info@yarracity.vic.gov.au
+Website: www.yarracity.vic.gov.au
+Postal Address: PO Box 168, Richmond VIC 3121
+
+Hours: Monday to Friday, 8:30am to 5:00pm (excluding public holidays)
+
+Accessibility Services:
+TTY (Text Telephone): 133 677 then 03 9205 5555
+Interpreter Service: 03 9280 1940 (for translation to other languages)
+
+After Hours Emergency:
+For urgent matters outside business hours, check website for emergency contact information.
+
+[CUSTOMER SERVICE CENTRES]
+
+COLLINGWOOD TOWN HALL
+Address: 140 Hoddle Street, Abbotsford VIC 3067
+Phone: 03 9205 5555
+Hours: Monday to Friday, 8:30am to 5:00pm
+Services: General enquiries, rates, planning, parking, permits
+
+RICHMOND TOWN HALL
+Address: 333 Bridge Road, Richmond VIC 3121
+Phone: 03 9205 5555
+Hours: Monday to Friday, 8:30am to 5:00pm
+Services: General enquiries, rates, planning, parking, permits
+
+[DEPARTMENT-SPECIFIC CONTACTS]
+
+Planning & Building:
+Email: planningadmin@yarracity.vic.gov.au
+Phone: 03 9205 5555
+Hours: Monday to Friday, 8:30am to 5:00pm
+Response: Usually within 5 business days for enquiries
+
+Parking & Traffic:
+Email: parking@yarracity.vic.gov.au
+Phone: 03 9205 5555
+Services: Parking fines, permits, enforcement
+
+Rates & Finance:
+Phone: 03 9205 5555 or 1300 792 772
+Services: Payment, accounts, valuations, pensioner rebates
+
+Family & Children's Services:
+MCH Booking Line: 03 9205 5599
+Email: mch@yarracity.vic.gov.au
+24/7 MCH Helpline: 132229 (state service)
+
+Libraries:
+Website: www.yarracity.vic.gov.au/our-libraries
+Individual branch contact details available on website
+
+Leisure Centres:
+Phone: 03 9205 5555
+Website: www.yarracity.vic.gov.au/yarra-leisure
+
+[ONLINE SERVICES AVAILABLE]
+
+eRates Account:
+- Manage rates account online
+- Pay rates via credit card, direct debit, or BPAY
+- View payment history
+- Update property details
+- Apply for pensioner rebates
+- Access anytime from home
+
+Planning Applications:
+- Submit planning permits via Yarra eServices or VicSmart
+- Track application progress
+- Download application documents
+- View planning scheme
+
+Report Issues Online:
+- Report missed bins, damaged bins
+- Report dumped rubbish
+- Report graffiti
+- Report parking violations
+- Report street damage
+- Report noise complaints
+- Report lost or found animals
+
+Payment Options:
+- Credit/debit card online
+- BPAY
+- Direct debit setup
+- Phone payment
+- In-person at customer service centres
+- By mail
+
+Council Website:
+www.yarracity.vic.gov.au
+- Comprehensive service information
+- Online forms and applications
+- Fee schedules
+- News and updates
+- Meeting agendas and minutes
+- Council policies and documents
+
+[FREQUENTLY ASKED QUESTIONS - COMMON INQUIRIES]
+
+BINS & WASTE:
+Q: What day is my bin collection?
+A: Bin day varies by location. The 4-bin system includes: Red (weekly general waste), Yellow (fortnightly recycling), Purple (fortnightly glass), Lime green (weekly FOGO). Check your collection day on the back of your rates notice or by phoning 03 9205 5555.
+
+Q: What goes in the purple bin?
+A: Glass bottles and jars only. No other items. Purple bin is collected fortnightly alternating with the yellow recycling bin.
+
+Q: What goes in the FOGO bin?
+A: Food scraps (meat, fish, dairy, vegetables) and garden waste (grass, leaves, branches). No plastic bags or non-compostable liners.
+
+Q: How do I report a missed bin?
+A: Report online via Council website, or phone 03 9205 5555. Provide your address, bin colour, and collection date. Usually attended within 2-3 working days.
+
+Q: How often can I use hard rubbish collection?
+A: Maximum 2 times per calendar year. Must book online through Council website.
+
+PARKING:
+Q: How do I pay a parking fine?
+A: Pay online (preferred, 24/7), in person at customer service centres (Mon-Fri 8:30am-5pm), by phone 1300 792 772, by mail, or by BPAY (biller code 171074).
+
+Q: How do I appeal a parking fine?
+A: Appeal online via Council website using your reference number, explain your grounds, and attach evidence. You can also appeal by mail or phone.
+
+Q: What is the payment plan for fines?
+A: Once-off one-month extension available. If you hold a Pensioner Concession Card, DVA card, or Health Care Card, you can arrange a 3-month extension. Contact Council before penalty reminder is issued.
+
+Q: How do I get a residential parking permit?
+A: Apply online via Council website or in person at customer service centres. Provide proof of residence. Permits are allocated based on zone eligibility.
+
+RATES:
+Q: How do I pay my rates?
+A: Multiple options: Online (credit card/direct transfer), BPAY (code 171074), Phone 1300 792 772, direct debit, in person, by mail, or Australia Post.
+
+Q: What are the quarterly payment due dates?
+A: 30 September, 30 November, 28 February, 31 May. Or pay in full by the first instalment date.
+
+Q: Am I eligible for a pensioner rebate?
+A: Yes, if you hold a Victorian Pensioner Concession Card or Department of Veterans' Affairs (DVA) Card. Apply in person at customer service centres with your card.
+
+Q: I'm struggling to pay - what help is available?
+A: Contact Council on 03 9205 5555 and speak to the Financial Hardship Officer. Council can discuss payment plans, deferrals, and support options.
+
+PLANNING:
+Q: Do I need a planning permit?
+A: If you're in a heritage area (most of Yarra), almost any exterior change needs a permit. Check your property on VicPlan or contact Council. Pre-application advice available.
+
+Q: How long does planning assessment take?
+A: Varies by project complexity. Simple applications may be assessed within 28 days. Complex heritage projects may take 2-3 months. You'll be notified of progress.
+
+Q: My property is in a heritage area - what does that mean?
+A: Heritage overlay protects historic buildings. Most exterior changes require planning approval. Interior changes usually unrestricted. Get heritage advice before applying.
+
+Q: Can I appeal a planning decision?
+A: Yes. Decisions can be appealed to VCAT within 28 days. Information provided with Council decision letter.
+
+Q: As of 1 July 2025, do I still need a planning permit for a liquor licence?
+A: No. Planning permit no longer required for liquor licensing. But LCV (Liquor and Gambling Victorian) licence from state government is still required.
+
+PETS:
+Q: How do I register my dog or cat?
+A: Register online (fastest), in person at customer service centres, by mail, or phone. Provide microchip number, proof of desexing, and vaccination proof.
+
+Q: What are the maximum animals I can keep?
+A: Dogs: Maximum 2 in a house, 1 in a unit/flat. Cats: Maximum 2 in a house, 1 in a unit/flat. Excess animal permit available if you want more.
+
+Q: Is microchipping mandatory?
+A: Yes. All dogs and cats must be microchipped before registration. Cost approximately $50-80 through vet.
+
+Q: What do I do if I find a lost pet?
+A: Contact Council on 03 9205 5555 or email info@yarracity.vic.gov.au. Check for tags or microchip at vet. Council holds found pets for 8-day reclaim period.
+
+FAMILY SERVICES:
+Q: How do I book an MCH appointment?
+A: Call MCH Booking Line: 03 9205 5599. Or call 24/7 MCH Helpline: 132229. Eight MCH centres across Yarra.
+
+Q: Is immunisation free?
+A: Yes. Free drop-in immunisation clinics at multiple locations. No appointment needed.
+
+Q: How do I enroll in childcare?
+A: Contact individual centres for availability. Check with Council for service directory. Child Care Subsidy (CCS) available to eligible families.
+
+LIBRARIES:
+Q: How do I get a library card?
+A: Join for free at any library branch. Can register online or in person. Immediate access to physical and digital collections.
+
+Q: What programs does the library offer?
+A: Book groups, author talks, children's programs, digital skills, gaming consoles, iPad lending (55+/disability), community pantry, and more.
+
+NOISE:
+Q: How do I report a noise complaint?
+A: Report online (preferred), phone 03 9205 5555, or email info@yarracity.vic.gov.au. Document the problem: date, time, duration, type of noise. Keep a log for 7 days.
+
+Q: What are building works hours restrictions?
+A: Building works must comply with Clause 49 of General Local Law. Weekday and weekend hour restrictions apply. Check with Council for specific times.
+
+================================================================================
+SECTION 17: COMPREHENSIVE URL DIRECTORY
+================================================================================
+
+MAIN COUNCIL WEBSITE & CORE PAGES:
+www.yarracity.vic.gov.au - Council homepage
+www.yarracity.vic.gov.au/contact-us - Contact information and customer service centres
+
+RATES & FINANCIAL SERVICES:
+www.yarracity.vic.gov.au/residents/rates - Rates information and eRates account setup
+www.yarracity.vic.gov.au/residents/rates - Payment options and pensioner rebates
+
+PARKING SERVICES:
+www.yarracity.vic.gov.au/residents/transport/parking/parking-fines - Parking fine information and payment
+www.yarracity.vic.gov.au/residents/transport/parking/parking-permits - Parking permit application
+www.yarracity.vic.gov.au/residents/transport/parking/parking-enforcement - Parking enforcement and reporting
+
+WASTE & RECYCLING:
+www.yarracity.vic.gov.au/residents/bins-waste-recycling-and-cleansing - Bins, waste, and recycling information
+www.yarracity.vic.gov.au/residents/bins-waste-recycling-and-cleansing - 4-bin system details and collection schedules
+www.yarracity.vic.gov.au/residents/bins-waste-recycling-and-cleansing - Hard rubbish collection booking
+www.yarracity.vic.gov.au/residents/bins-waste-recycling-and-cleansing - Waste reduction advice and drop-off facilities
+
+PLANNING & BUILDING:
+www.yarracity.vic.gov.au/planning-and-building/planning-permits - Planning permit information and application
+www.yarracity.vic.gov.au/planning-and-building/planning-permits/frequently-asked-questions - Planning FAQs
+greenlight.vic.gov.au - Greenlight portal for planning applications (external)
+vicplan.delwp.vic.gov.au - VicPlan for zoning and overlay information (external state service)
+
+PETS & ANIMALS:
+www.yarracity.vic.gov.au/residents/pets-and-animals - Pet registration and animal management information
+www.yarracity.vic.gov.au/residents/pets-and-animals - Dog and cat registration
+www.yarracity.vic.gov.au/residents/pets-and-animals - Animal welfare and barking dog complaints
+
+LIBRARIES:
+www.yarracity.vic.gov.au/our-libraries - Library information and services
+www.yarracity.vic.gov.au/our-libraries/our-services - Library programs and collections
+
+LEISURE & RECREATION:
+www.yarracity.vic.gov.au/yarra-leisure - Leisure centres and recreation information
+www.yarracity.vic.gov.au/yarra-leisure/locations - Facility locations and programs
+
+FAMILY & CHILDREN'S SERVICES:
+www.yarracity.vic.gov.au/residents/child-youth-and-family-services/family-and-children - Family and children services
+www.yarracity.vic.gov.au/residents/child-youth-and-family-services/family-and-children/maternal-and-child-health - Maternal & Child Health service information
+mch@yarracity.vic.gov.au - MCH email contact
+03 9205 5599 - MCH booking line
+132229 - 24/7 MCH helpline (state service)
+
+CLIMATE & SUSTAINABILITY:
+www.yarracity.vic.gov.au/climate-and-sustainability/council-taking-climate-action - Climate action and sustainability initiatives
+www.yarracity.vic.gov.au/climate-and-sustainability/take-community-action/climate-action-and-advocacy - Community climate action programs
+
+LOCAL LAWS & GOVERNANCE:
+www.yarracity.vic.gov.au/about-us/council-mayor-and-councillors/governance/local-laws - Local laws information
+www.yarracity.vic.gov.au/about-us/council-mayor-and-councillors/governance/local-laws/noise-complaints - Noise complaint information
+www.yarracity.vic.gov.au/about-us/council-mayor-and-councillors - Councillor information
+
+SERVICES DIRECTORY:
+www.yarracity.vic.gov.au/services - Comprehensive services directory
+
+GENERAL CONTACTS & INFORMATION:
+Phone: 03 9205 5555
+Email: info@yarracity.vic.gov.au
+Interpreter Service: 03 9280 1940
+Parking Enquiries: parking@yarracity.vic.gov.au or 1300 792 772
+Planning Enquiries: planningadmin@yarracity.vic.gov.au
+Rates Enquiries: 1300 792 772
+Emergency (24/7): 000
+
+EXTERNAL USEFUL LINKS:
+VicSmart (minor planning works): vicsmartplanning.vic.gov.au
+VicPlan (planning zoning): vicplan.delwp.vic.gov.au
+LANDATA (property titles): landata.com.au
+Valuer-General Victoria: vgv.vic.gov.au
+Fines Victoria: finesvictoria.vic.gov.au
+Victorian Building Authority: vba.vic.gov.au
+VCAT (planning appeals): vcat.vic.gov.au
+Local Government Victoria: localgovernment.vic.gov.au
+
+NEIGHBOURING COUNCILS:
+City of Melbourne: 03 9658 9658 - www.melbourne.vic.gov.au
+City of Darebin: 03 8470 8888 - www.darebin.vic.gov.au
+City of Merri-bek/Moreland: 03 9240 1111 - www.merri-bek.vic.gov.au
+City of Boroondara: 03 9278 4444 - www.boroondara.vic.gov.au
+City of Stonnington: 03 8290 1333 - www.stonnington.vic.gov.au
+
+================================================================================
+SECTION 18: ADDITIONAL REFERENCE INFORMATION
+================================================================================
+
+[KEY POLICIES & DOCUMENTS]
+
+Domestic Animal Management Plan 2026-2029:
+- Council's comprehensive animal management strategy
+- Available from Council website
+- Covers registration, welfare, lost pets, dangerous animals
+
+Sustainability & Climate Plans:
+- Climate Emergency Plan 2024-2030
+- Integrated Water Management Plan
+- Environmental strategies
+- Available from Council website at www.yarracity.vic.gov.au/climate-and-sustainability
+
+Parking & Transport Strategy:
+- Long-term parking and transport planning
+- Available from Council website
+
+Community Engagement:
+- Council meetings open to public
+- Monthly meeting schedule
+- Agendas and minutes available online
+- Community consultation on major decisions
+
+[FREQUENTLY CITED LEGISLATION & AUTHORITIES]
+
+Victorian Legislation Referenced:
+- Planning and Environment Act 1987
+- Building Act 2004
+- Local Government Act 1989
+- General Local Law 2019
+- Domestic Animals Act 1994
+
+External Regulatory Bodies:
+- Department of Transport and Planning (State)
+- Victorian Building Authority (State)
+- Valuer-General Victoria (State)
+- Liquor and Gambling Victoria (State)
+- VCAT - Victorian Civil and Administrative Tribunal
+
+[EMERGENCY INFORMATION]
+
+Emergency Services:
+- Emergency (Police, Fire, Ambulance): 000
+- Police Non-Emergency: 03 9205 5555
+- Fire Brigade Non-Emergency: Contact Council
+
+Mental Health Crisis:
+- Lifeline: 13 11 14
+- Beyond Blue: 1300 224 636
+- Kids Helpline: 1800 551 800
+
+Domestic Violence:
+- 1800RESPECT: 1800 737 732
+- Local services: Contact Council or visit website
+
+Animal Welfare:
+- RSPCA: 03 9224 2222
+- Lost Dogs' Home: Contact Council for details
+
+[IMPORTANT DATES & PERIODS]
+
+Quarterly Rates Due Dates:
+- 30 September
+- 30 November
+- 28 February
+- 31 May
+
+Hard Rubbish - Maximum Collections:
+- 2 collections per calendar year only
+
+MCH Services:
+- Available year-round
+- 24/7 helpline: 132229
+- Drop-in immunisation clinics
+
+Planning Appeals:
+- 28-day appeal period after Council decision
+- Appeal to VCAT
+
+Pet Registration:
+- Annual renewal required
+- Registration due each year
+
+================================================================================
+FINAL NOTES
+================================================================================
+
+This knowledge base is accurate as of 4 April 2026. Council policies and procedures may change. For the most current information, always refer to:
+- Council website: www.yarracity.vic.gov.au
+- Phone: 03 9205 5555
+- Email: info@yarracity.vic.gov.au
+- Customer service centres in Richmond and Abbotsford
+
+This knowledge base is designed to provide comprehensive, accurate information to support CouncilGenius V8 in delivering excellent customer service to Yarra City Council residents.
+
+All information provided is sourced from official Yarra City Council channels and is presented with appropriate source citations throughout.
+
+================================================================================
+END OF KNOWLEDGE BASE
+================================================================================
